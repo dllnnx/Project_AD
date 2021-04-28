@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class EasySpellingActivity extends AppCompatActivity {
 
-	SpellingView spView;
+	SpellingView2 spView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,7 @@ public class EasySpellingActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_easyspelling);
 		getSupportActionBar().hide();
 
-		spView = (SpellingView)findViewById(R.id.spelling_view);
+		spView = (SpellingView2)findViewById(R.id.spelling_view);
 		boolean isDone = false;
 
 
