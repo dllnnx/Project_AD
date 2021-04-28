@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="@color/bg_color">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:text="Найди пару"
+		android:textColor="@color/gray"
+		android:textSize="33sp"
+		android:textStyle="italic"
+		/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:shadowColor="#7669AA"
+		android:shadowDx="2"
+		android:shadowDy="2"
+		android:shadowRadius="5"
+		android:text="Выбор уровня"
+		android:textColor="@color/black"
+		android:textSize="33sp"
+		android:textStyle="italic"
+		android:translationY="@android:dimen/thumbnail_width"
+		/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:backgroundTint="@color/btn_color"
+		android:insetTop="@android:dimen/app_icon_size"
+		android:shadowColor="#000000"
+		android:shadowDx="2"
+		android:shadowDy="2"
+		android:shadowRadius="5"
+		android:text="Легкий"
+		android:textSize="20sp"
+		android:translationY="@android:dimen/thumbnail_width"
+		/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/btn_color"
+		android:layout_gravity="center"
+		android:textSize="20sp"
+		android:translationY="@android:dimen/thumbnail_width"
+		android:text="Средний"
+		android:shadowColor="#000000"
+		android:shadowDx="2"
+		android:shadowDy="2"
+		android:shadowRadius="5"
+		/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/btn_color"
+		android:layout_gravity="center"
+		android:textSize="20sp"
+		android:translationY="@android:dimen/thumbnail_width"
+		android:textStyle=""
+		android:text="Сложный"
+		android:shadowColor="#000000"
+		android:shadowDx="2"
+		android:shadowDy="2"
+		android:shadowRadius="5"
+		/>
+
+	<Button
+		android:id="@+id/cancel_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:backgroundTint="@color/btn_color"
+		android:insetTop="@android:dimen/app_icon_size"
+		android:shadowColor="#000000"
+		android:shadowDx="5"
+		android:shadowDy="2"
+		android:shadowRadius="5"
+		android:text="Назад"
+		android:textSize="20sp"
+		android:textStyle=""
+		android:translationY="@android:dimen/thumbnail_width"
+		/>
+
+
+</LinearLayout>
