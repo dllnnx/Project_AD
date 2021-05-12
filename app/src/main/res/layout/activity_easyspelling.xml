@@ -28,12 +28,12 @@
 		android:layout_height="fill_parent"
 		android:layout_weight="1">
 
-		<com.example.project_ad.SpellingView
+		<com.example.project_ad.SpellingView2
 			android:id="@+id/spelling_view"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent">
 
-		</com.example.project_ad.SpellingView>
+		</com.example.project_ad.SpellingView2>
 	</LinearLayout>
 
 

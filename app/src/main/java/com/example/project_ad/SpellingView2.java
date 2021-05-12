@@ -1,4 +1,4 @@
-package com.example.project_ad;
+ package com.example.project_ad;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -37,6 +37,12 @@ public class SpellingView2 extends View {
 			Collections.shuffle(this.distractor);
 		}
 
+		public void draw(Canvas canvas){
+			for (int i = 0; i < word.length(); i++){
+
+			}
+		}
+
 	}
 
 	class MyChar{
@@ -63,9 +69,27 @@ public class SpellingView2 extends View {
 		}
 
 		void draw(Canvas canvas){
-			canvas.drawRect(x + MARGIN, y + MARGIN, x + size - MARGIN,
-					y + size, paintRect);
-			canvas.drawText(text, x + size/6, y + size - size/5, paintText);
+			int missedInd = (int) (Math.random() * word.length());
+			String missedChar = word.charAt(missedInd) + "";
+
+			System.out.println(missedInd);
+
+			for (int i = 0; i < word.length(); i++){
+				canvas.drawRect(x + MARGIN, y + MARGIN, x + size - MARGIN,
+						y + size, paintRect);
+				if (i != missedInd) {
+					canvas.drawText(text, x + size/6, y + size - size/5, paintText);
+				} else{
+					//					minRectX = x;
+//					maxRectX = y;
+//					minRectY = 10;
+//					maxRectY = size;
+				}
+			}
+
+//			canvas.drawRect(x + MARGIN, y + MARGIN, x + size - MARGIN,
+//					y + size, paintRect);
+//			canvas.drawText(text, x + size/6, y + size - size/5, paintText);
 		}
 
 		boolean isIn(float x, float y){
@@ -122,6 +146,7 @@ public class SpellingView2 extends View {
 
 	@Override
 	protected void onDraw(Canvas canvas) {
+		canvas.drawRect(0, 0, getWidth(), getHeight(), new Paint());
 		if (!isInit){
 			init();
 			isInit = true;
