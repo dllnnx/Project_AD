@@ -22,6 +22,9 @@
 		<activity android:name=".ChoiceActivity" />
 		<activity android:name=".SpellingChoiceActivity"/>
 		<activity android:name=".EasySpellingActivity"/>
+		<activity android:name=".ToFChoiceActivity"/>
+		<activity android:name=".EasyTofActivity"/>
+		<activity android:name=".FindCoupActivity"/>
 	</application>
 
 </manifest>

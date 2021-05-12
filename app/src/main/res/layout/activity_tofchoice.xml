@@ -25,12 +25,13 @@
 		android:shadowRadius="5"
 		android:text="Выбор уровня"
 		android:textColor="@color/black"
-		android:textSize="33sp"
+		android:textSize="55sp"
 		android:textStyle="italic"
 		android:translationY="@android:dimen/thumbnail_width"
 		/>
 
 	<Button
+		android:id="@+id/easytof_btn"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_gravity="center"
@@ -41,16 +42,17 @@
 		android:shadowDy="2"
 		android:shadowRadius="5"
 		android:text="Легкий"
-		android:textSize="20sp"
+		android:textSize="35sp"
 		android:translationY="@android:dimen/thumbnail_width"
 		/>
 
 	<Button
+		android:id="@+id/medtof_btn"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:backgroundTint="@color/btn_color"
 		android:layout_gravity="center"
-		android:textSize="20sp"
+		android:textSize="35sp"
 		android:translationY="@android:dimen/thumbnail_width"
 		android:text="Средний"
 		android:shadowColor="#000000"
@@ -60,11 +62,12 @@
 		/>
 
 	<Button
+		android:id="@+id/hardtof_btn"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:backgroundTint="@color/btn_color"
 		android:layout_gravity="center"
-		android:textSize="20sp"
+		android:textSize="35sp"
 		android:translationY="@android:dimen/thumbnail_width"
 		android:textStyle=""
 		android:text="Сложный"
@@ -75,7 +78,7 @@
 		/>
 
 	<Button
-		android:id="@+id/cancel_btn"
+		android:id="@+id/canceltof_btn"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_gravity="center"
@@ -86,7 +89,7 @@
 		android:shadowDy="2"
 		android:shadowRadius="5"
 		android:text="Назад"
-		android:textSize="20sp"
+		android:textSize="40sp"
 		android:textStyle=""
 		android:translationY="@android:dimen/thumbnail_width"
 		/>
