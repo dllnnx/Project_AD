@@ -9,11 +9,18 @@ import android.widget.Button;
 
 public class EasyTofActivity extends AppCompatActivity {
 
+	Button true_btn, false_btn;
+
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_easyspelling);
+		setContentView(R.layout.activity_easytof);
 		getSupportActionBar().hide();
+
+
+		int count = 0;
+
+
 	}
 }

@@ -9,4 +9,6 @@
 	<color name="white">#FFFFFFFF</color>
 	<color name="back_color">#CE9D8DD8</color>
 	<color name ="letters_color">#222222</color>
+	<color name="a">#957CF3</color>
+
 </resources>
