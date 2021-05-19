@@ -19,8 +19,24 @@ public class EasyTofActivity extends AppCompatActivity {
 		getSupportActionBar().hide();
 
 
+		true_btn = (Button) findViewById(R.id.true_btn);
+		false_btn = (Button) findViewById(R.id.false_btn);
 		int count = 0;
 
+
+		true_btn.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+			}
+		});
+
+		false_btn.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+			}
+		});
 
 	}
 }

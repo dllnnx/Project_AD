@@ -9,11 +9,20 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 
 public class TofView extends View {
 
 	public TofView(Context context, AttributeSet attrs) {
 		super(context, attrs);
+
+		tasks.add(new Task("кролик", "rabbit", true));
+		tasks.add(new Task("собака", "dog", true));
+		tasks.add(new Task("кошка", "animal", false));
+		tasks.add(new Task("корова", "cow", true));
+		tasks.add(new Task("диван", "bed", false));
+
 	}
 
 	private String word;
@@ -22,10 +31,10 @@ public class TofView extends View {
 	public float rectW = (float) (getWidth() * 0.3);
 	public float rectH = (float) (getWidth()/ruWord.length());
 	public int MARGIN = 20;
-	public Task task = new Task("кролик", "rabbit", true);
 	protected float trueX1, trueX2, trueY1, trueY2;
 	protected float falseX1, falseX2, falseY1, falseY2;
 	public int count = 0;
+	ArrayList<Task> tasks = new ArrayList<>();
 
 
 	class Task{
@@ -37,15 +46,15 @@ public class TofView extends View {
 			this.ruWord = ruWord;
 			this.engWord = engWord;
 			this.bool = bool;
+			if (ruWord.length() > engWord.length())
+				wordLength = ruWord.length();
+			else
+				wordLength = engWord.length();
 
 		}
 
 
 		void draw(Canvas canvas) {
-			if (ruWord.length() > engWord.length())
-				wordLength = ruWord.length();
-			else
-				wordLength = engWord.length();
 
 			float textSize = (float) (getWidth()/wordLength - MARGIN*2.5);
 			float rectHeight = getWidth()/ruWord.length();
@@ -97,6 +106,7 @@ public class TofView extends View {
 
 	}
 
+
 	class Word{
 		public String word;
 
@@ -111,24 +121,35 @@ public class TofView extends View {
 		}
 	}
 
+	public int index = 0;
 
 	@Override
 	protected void onDraw(Canvas canvas) {
 
+		tasks.get(0).draw(canvas);
 
-		task.draw(canvas);
+		for(int i = 1; i < tasks.size(); i++){
+			if (isDone)
+				tasks.get(i).draw(canvas);
+			index = i;
+		}
 
 	}
 
+	public boolean isDone = false;
+
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
+
+		isDone = false;
 
 		float mousePosX = event.getX(), mousePosY = event.getY(0);
 		float rightRectX1, rightRectX2, rightRectY1, rightRectY2;
 		float wrongRectX1, wrongRectX2, wrongRectY1, wrongRectY2;
 		//boolean down = false, rightDown = false;
 
-		if (task.bool == true){
+
+		if (tasks.get(index).bool == true){
 			rightRectX1 = trueX1; rightRectX2 = trueX2;
 			rightRectY1 = trueY1; rightRectY2 = trueY2;
 			wrongRectX1 = falseX1; wrongRectX2 = falseX2;
@@ -143,10 +164,12 @@ public class TofView extends View {
 		if (event.getAction() == MotionEvent.ACTION_DOWN){
 			if(mousePosX >= rightRectX1 && mousePosX <= rightRectX2 & mousePosY >= rightRectY1 && mousePosY <= rightRectY2){
 				count++;
+				isDone = true;
 				invalidate();
 			}
 			if(mousePosX >= wrongRectX1 && mousePosX <= wrongRectX2 & mousePosY >= wrongRectY1 && mousePosY <= wrongRectY2){
 				count--;
+				isDone = true;
 				invalidate();
 			}
 		}

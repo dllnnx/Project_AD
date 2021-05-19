@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="fill_parent"
+	android:background="@color/bg_color"
+	android:layout_weight="1">
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:textAlignment="center"
+		android:textSize="45sp"
+		android:textStyle="italic"
+		android:text="Правда или ложь?"
+		/>
+
+	<LinearLayout
+		android:layout_weight="1"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/bg_color">
+
+		<TextView
+			android:layout_weight="1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="ddd"
+			android:textSize="55sp"
+			android:textStyle="italic"
+			android:gravity="center_horizontal"
+			/>
+
+		<TextView
+			android:layout_weight="1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:text="dddd"
+			android:textSize="55sp"
+			android:textStyle="italic"
+			/>
+
+	</LinearLayout>
+
+
+
+	<LinearLayout
+		android:layout_weight="1"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/bg_color">
+
+
+		<TextView
+			android:layout_weight="1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Слово"
+			android:textSize="30sp"
+			android:textStyle="italic"
+			android:gravity="center_horizontal"
+			/>
+
+		<TextView
+			android:layout_weight="1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Перевод"
+			android:textSize="30sp"
+			android:textStyle="italic"
+			android:gravity="center_horizontal"
+			/>
+	</LinearLayout>
+
+
+
+	<LinearLayout
+		android:layout_weight="1"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/bg_color">
+
+		<Button
+			android:layout_weight="1"
+			android:id="@+id/true_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:backgroundTint="@color/btn_color"
+			android:shadowColor="#000000"
+			android:shadowDx="2"
+			android:shadowDy="2"
+			android:shadowRadius="5"
+			android:text="Правда"
+			android:textSize="35sp"
+			/>
+
+		<Button
+			android:layout_weight="1"
+			android:id="@+id/false_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:backgroundTint="@color/btn_color"
+			android:shadowColor="#000000"
+			android:shadowDx="2"
+			android:shadowDy="2"
+			android:shadowRadius="5"
+			android:text="Ложь"
+			android:textSize="35sp"
+			/>
+	</LinearLayout>
+
+	<TextView
+		android:textSize="35sp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Счёт: 0"
+		/>
+
+
+</LinearLayout>
