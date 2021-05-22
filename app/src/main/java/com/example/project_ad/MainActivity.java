@@ -11,8 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
 	TextView start_text;
-	Button start_btn;
-	Button exit_btn;
+	Button start_btn, scores_btn, exit_btn;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
 		start_text = (TextView)findViewById(R.id.start_text);
 		start_btn = (Button)findViewById(R.id.btn_start);
+		scores_btn = (Button)findViewById(R.id.btn_scores);
 		exit_btn = (Button)findViewById(R.id.btn_exit);
 
 
@@ -29,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				Intent i = new Intent(MainActivity.this, ChoiceActivity.class);
+				startActivity(i);
+			}
+		});
+
+		scores_btn.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(MainActivity.this, ScoresActivity.class);
 				startActivity(i);
 			}
 		});

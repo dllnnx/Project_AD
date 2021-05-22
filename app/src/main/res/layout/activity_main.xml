@@ -46,6 +46,26 @@
 		/>
 
 	<Button
+		android:id="@+id/btn_scores"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:backgroundTint="@color/btn_color"
+		android:elevation="6dp"
+		android:insetTop="@android:dimen/app_icon_size"
+		android:shadowColor="#000000"
+		android:shadowDx="2"
+		android:shadowDy="2"
+		android:shadowRadius="5"
+		android:stateListAnimator="@null"
+		android:text="Рекорды"
+		android:textSize="35sp"
+		android:textStyle="italic"
+		android:translationY="@android:dimen/thumbnail_height"
+		android:translationZ="4dp"
+		/>
+
+	<Button
 		android:id="@+id/btn_exit"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"

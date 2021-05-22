@@ -53,22 +53,6 @@
 		/>
 
 	<Button
-		android:id="@+id/findCoup_btn"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:backgroundTint="@color/btn_color"
-		android:layout_gravity="center"
-		android:textSize="35sp"
-		android:translationY="@android:dimen/thumbnail_width"
-		android:textStyle=""
-		android:text="Найди пару"
-		android:shadowColor="#000000"
-		android:shadowDx="2"
-		android:shadowDy="2"
-		android:shadowRadius="5"
-		/>
-
-	<Button
 		android:id="@+id/cancel_choice_btn"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
