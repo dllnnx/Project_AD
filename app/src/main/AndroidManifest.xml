@@ -25,6 +25,7 @@
 		<activity android:name=".ToFChoiceActivity"/>
 		<activity android:name=".EasyTofActivity"/>
 		<activity android:name=".FindCoupActivity"/>
+		<activity android:name=".ScoresActivity"/>
 	</application>
 
 </manifest>
